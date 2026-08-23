@@ -1,8 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: "Course Schedule"
+title: "Network Applications and Protocols"
 ---
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Course Schedule
+
+## Fall 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 # CS 330 Course Schedule
 

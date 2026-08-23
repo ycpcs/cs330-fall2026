@@ -1,10 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: Resources
+title: Network Applications and Protocols
 ---
 
-This page contains links and tools to help you throughout the course.
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Resources
+
+## Fall 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ## Development Environment
 

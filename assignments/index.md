@@ -1,10 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: "Assignments"
+title: "Network Applications and Protocols"
 ---
 
-This page links to homework and programming assignments.
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Homework and programming assignments
+
+## Fall 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 > Assignment | Solutions | Points | Due |
 > ---------- | ---- | ------ | --- |

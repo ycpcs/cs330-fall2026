@@ -1,20 +1,21 @@
 ---
 layout: default
 course_number: CS330
-title: "Ethics"
+title: "Network Applications and Protocols"
 ---
 
-Ethics and Legal Responsibilities Assignment
-=========================================
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-**Due: Thursday, Aug 27, 2026 by 6:00 PM**
+## CS 330: Ethics and Legal Responsibilities
 
-Purpose
--------
+## Due: Thursday, Aug 27, 2026 by 6:00 PM**
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## Purpose
 In this course, you will gain hands-on experience with networking tools, protocols, and techniques, including some that have been used in real-world cyberattacks. Understanding these concepts is essential for building secure and reliable systems. With this knowledge comes ethical and legal responsibility.
 
-Legal and Institutional Guidelines
----------------------------------
+## Legal and Institutional Guidelines
 You are expected to act lawfully and ethically at all times. Activities such as probing, exploiting, or intercepting data on unauthorized systems—even if done with good intentions—can violate:
 
 - **Federal Law**, such as the Computer Fraud and Abuse Act [CFAA]( http://uscode.house.gov/view.xhtml?req=(title:18%20section:1030%20edition:prelim)).
@@ -25,9 +26,10 @@ Unauthorized use of these techniques can result in serious consequences, includi
 
 If you are ever unsure whether an action is permitted or ethical, **consult your instructor first**.
 
-Notable Real-World Cases (abbreviated and contextualized)
----------------------------------------------------------
+## Notable Real-World Cases (abbreviated and contextualized)
+
 Here are some examples of people who faced serious consequences for unethical or illegal use of computer networking knowledge:
+
 - [Audrey Strauss](https://www.justice.gov/usao-sdny/pr/russian-hacker-sentenced-12-years-prison-involvement-massive-network-intrusions-us) - Sentenced to 12 years for JP Morgan Chase data breach.  
 - [Onur Kopçak](https://www.dailysabah.com/turkey/2016/01/10/young-hacker-sentenced-to-record-334-years-in-prison-in-mass-bank-fraud-in-turkey) - Received a record-setting sentence for large-scale phishing and bank fraud.
 - [Albert Gonzalez](https://www.justice.gov/opa/pr/leader-hacking-ring-sentenced-massive-identity-thefts-payment-processor-and-us-retail) - Sentenced to 20 years for masterminding a data breach affecting 170 million credit card numbers.
@@ -38,24 +40,23 @@ Here are some examples of people who faced serious consequences for unethical or
 
 These examples serve as a reminder that even seemingly harmless actions can lead to major legal and ethical consequences.
 
-Your Responsibility
--------------------
+## Your Responsibility
+
 You are expected to:
+
 - Understand and follow relevant laws and policies.
 - Use course tools only on authorized systems or lab environments.
 - Never attempt to exploit or interfere with real-world systems or networks.
 - Maintain the highest standards of academic and professional integrity.
 
-AI Tools and Responsible Use
----------------------------
+## AI Tools and Responsible Use
 AI tools such as ChatGPT, Copilot, and similar systems can be useful for brainstorming ideas, clarifying technical concepts, and improving writing. They can also be helpful when learning about networking topics and debugging code or error messages. However, these tools should support your learning, not replace it.
 
 For this class, you are expected to do your own thinking and write your own response in your own words. Do not submit AI-generated text as if it were your original work. If you use AI for help, you should still be able to explain the ideas clearly and honestly, and you should not rely on it to do the core analysis for you.
 
 In other words, AI may be a useful learning tool, but it does not excuse academic dishonesty. Misrepresenting AI-generated content as your own work, or using it to complete assignments without understanding the material, violates the same standards of integrity that apply to all submitted work in this course.
 
-Exam Dates
-----------
+## Exam Dates
 The exam dates are set on the first day of class and will not change:
 
 - **Exam 1:** September 22
@@ -65,8 +66,7 @@ The exam dates are set on the first day of class and will not change:
 
 By signing below, you acknowledge these dates and agree to plan accordingly.
 
-Assignment
-----------
+## Assignment
 In your own words, respond to the following:
 > **Why is ethical behavior important in the field of computer networking? Describe a situation where a networking professional might face an ethical dilemma, and explain how you think it should be handled.**
 
@@ -80,7 +80,7 @@ Your response should be thoughtful and should reflect your understanding of the 
 Please acknowledge that you understand the responsibilities and risks associated with the material covered in this course.
 
 > I have read and understood the expectations for lawful and ethical conduct in this course.  
-> I agree to abide by all institutional and legal policies and to use the knowledge gained responsibly.
+> I agree to abide by all institutional and legal policies and to use the knowledge gained responsibly.  
 > I understand that the exam dates are set on the first day of class. I agree to the dates listed above and will plan accordingly.
 
 **Name:** ____________________________________
