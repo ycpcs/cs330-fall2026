@@ -20,10 +20,11 @@ This is your central hub for all course-related information, including announcem
 * [Schedule](schedule/index.html)
 * [Assignments](assignments/index.html)
 * [Resources](resources/index.html) 
-* [Marmoset (submission server)](https://cs.ycp.edu/marmoset)
+* <a href="https://cs.ycp.edu/marmoset" target="_blank" rel="noopener">Marmoset (submission server)</a>
 
 ## News
-* **Exam dates** - These dates will not change.
+> **The exam dates are fixed and will not change. Please plan accordingly.**
+
 * **Dec 10** - Final Exam 6:00PM - 8:00PM
 * **Nov 10** - Exam 3
 * **Oct 20** - Exam 2
