@@ -12,6 +12,8 @@ title: "Network Applications and Protocols"
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
+This page lists the homework assignments, labs, and programming assignments for the course. Optional homework assignments will be marked as such.
+
 > Assignment | Solutions | Points | Due |
 > ---------- | ---- | ------ | --- |
 > [Ethics and Legal Responsibilities](ethics.html) | n/a | n/a | Aug 27, 2026

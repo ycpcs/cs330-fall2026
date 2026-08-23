@@ -1,11 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: Syllabus
+title: Network Applications and Protocols
 ---
 
-## CS 330: Network Applications and Protocols
-### Fall 2026
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Syllabus
+
+## Fall 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ### Class Times
 

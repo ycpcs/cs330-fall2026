@@ -12,8 +12,6 @@ title: "Network Applications and Protocols"
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-# CS 330 Course Schedule
-
 This page provides a tentative schedule for the course. Topics, readings, and assignment due dates may change as the semester progresses. Any significant changes will be announced in class and on the course website.
 
 **Textbook:** [Computer Networking: A Top-Down Approach](https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000013385/9780135429334), 9th Edition, 2026, ISBN-13: 9780135429334.
