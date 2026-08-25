@@ -1,10 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: Introduction
+title: Network Applications and Protocols
 ---
 
-## Get to know you
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Introduction
+
+## Fall 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ### Quick intro
 - What's your name, and how would you like to be addressed in class?

@@ -8,7 +8,7 @@ title: "Network Applications and Protocols"
 
 ## CS 330: Ethics and Legal Responsibilities
 
-## Due: Thursday, Aug 27, 2026 by 6:00 PM**
+## Due: Thursday, Aug 27, 2026 by 6:00 PM
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
