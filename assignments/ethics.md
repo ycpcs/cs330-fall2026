@@ -13,7 +13,7 @@ title: "Network Applications and Protocols"
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ## Purpose
-In this course, you will gain hands-on experience with networking tools, protocols, and techniques, including some that have been used in real-world cyberattacks. Understanding these concepts is essential for building secure and reliable systems. With this knowledge comes ethical and legal responsibility.
+In this course, you will work with networking tools, protocols, and techniques, including some that have been used in real-world cyberattacks. Understanding these concepts is essential for building secure and reliable systems. This knowledge also comes with ethical and legal responsibilities.
 
 ## Legal and Institutional Guidelines
 You are expected to act lawfully and ethically at all times. Activities such as probing, exploiting, or intercepting data on unauthorized systems—even if done with good intentions—can violate:
@@ -33,8 +33,8 @@ Here are some examples of people who faced serious consequences for unethical or
 - [Audrey Strauss](https://www.justice.gov/usao-sdny/pr/russian-hacker-sentenced-12-years-prison-involvement-massive-network-intrusions-us) - Sentenced to 12 years for JP Morgan Chase data breach.  
 - [Onur Kopçak](https://www.dailysabah.com/turkey/2016/01/10/young-hacker-sentenced-to-record-334-years-in-prison-in-mass-bank-fraud-in-turkey) - Received a record-setting sentence for large-scale phishing and bank fraud.
 - [Albert Gonzalez](https://www.justice.gov/opa/pr/leader-hacking-ring-sentenced-massive-identity-thefts-payment-processor-and-us-retail) - Sentenced to 20 years for masterminding a data breach affecting 170 million credit card numbers.
-- [Roman Seleznev](https://www.justice.gov/opa/pr/russian-cyber-criminal-sentenced-14-years-prison-role-organized-cybercrime-ring-responsible) - Sentenced to 27 years' imprisonment for running Organized Cybercrime Ring.
-- [Max Butler](https://archives.fbi.gov/archives/pittsburgh/press-releases/2010/pt021210b.htm) - Received 13-Year Prison Sentence for identity theft.
+- [Roman Seleznev](https://www.justice.gov/opa/pr/russian-cyber-criminal-sentenced-14-years-prison-role-organized-cybercrime-ring-responsible) - Sentenced to 27 years' imprisonment for running an organized cybercrime ring.
+- [Max Butler](https://archives.fbi.gov/archives/pittsburgh/press-releases/2010/pt021210b.htm) - Received a 13-year prison sentence for identity theft.
 - [Sarah Palin E-mail Prankster](https://www.wired.com/2010/11/palin-hacker-sentenced/) - Sentenced to 1 Year in Custody.
 - [Samy Kamkar](https://www.scmagazine.com/home/security-news/myspace-superworm-creator-sentenced-to-probation-community-service/) - Created a MySpace worm as a prank, resulting in legal restrictions and probation.
 
@@ -52,7 +52,7 @@ You are expected to:
 ## AI Tools and Responsible Use
 AI tools such as ChatGPT, Copilot, and similar systems can be useful for brainstorming ideas, clarifying technical concepts, and improving writing. They can also be helpful when learning about networking topics and debugging code or error messages. However, these tools should support your learning, not replace it.
 
-For this class, you are expected to do your own thinking and write your own response in your own words. Do not submit AI-generated text as if it were your original work. If you use AI for help, you should still be able to explain the ideas clearly and honestly, and you should not rely on it to do the core analysis for you.
+For this class, you are expected to think through the work yourself and write your response in your own words. Do not submit AI-generated text as if it were your original work. If you use AI for help, you should still be able to explain the ideas clearly and honestly, and you should not rely on it to do the core analysis for you.
 
 In other words, AI may be a useful learning tool, but it does not excuse academic dishonesty. Misrepresenting AI-generated content as your own work, or using it to complete assignments without understanding the material, violates the same standards of integrity that apply to all submitted work in this course.
 
@@ -70,7 +70,7 @@ By signing below, you acknowledge these dates and agree to plan accordingly.
 In your own words, respond to the following:
 > **Why is ethical behavior important in the field of computer networking? Describe a situation where a networking professional might face an ethical dilemma, and explain how you think it should be handled.**
 
-Your response should be thoughtful and should reflect your understanding of the real-world impact of ethical decision-making in this field.
+Your response should be thoughtful and reflect your understanding of the real-world impact of ethical decisions in this field.
 
 **Response:**
 
@@ -82,6 +82,7 @@ Please acknowledge that you understand the responsibilities and risks associated
 > I have read and understood the expectations for lawful and ethical conduct in this course.  
 > I agree to abide by all institutional and legal policies and to use the knowledge gained responsibly.  
 > I understand that the exam dates are set on the first day of class. I agree to the dates listed above and will plan accordingly.
+> I understand that AI tools may support my learning but may not replace my own thinking or original work.
 
 **Name:** ____________________________________
 
