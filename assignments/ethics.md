@@ -81,8 +81,8 @@ Please acknowledge that you understand the responsibilities and risks associated
 
 > I have read and understood the expectations for lawful and ethical conduct in this course.  
 > I agree to abide by all institutional and legal policies and to use the knowledge gained responsibly.  
-> I understand that the exam dates are set on the first day of class. I agree to the dates listed above and will plan accordingly.</br>
-> I understand that AI tools may support my learning but may not replace my own thinking or original work.
+> I understand that AI tools may support my learning but may not replace my own thinking or original work.  
+> I understand that the exam dates are set on the first day of class. I agree to the dates listed above and will plan accordingly.  
 
 **Name:** ____________________________________
 
