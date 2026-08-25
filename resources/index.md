@@ -24,14 +24,16 @@ title: Network Applications and Protocols
 
 ### Passive Capture
 
-- [Wireshark](https://www.wireshark.org/) – Industry-standard for passive packet capture.
-- [TCPDump](https://www.tcpdump.org/) & `libpcap` – Command-line network analyzer.
-- [NetworkMiner](https://www.netresec.com/?page=NetworkMiner) – Forensic analysis tool.
-- [tcpflow](https://github.com/simsong/tcpflow) – Captures and reconstructs TCP flows.
-- `tcptrace` – Graphical tool for analyzing TCP dump files.
+- [Wireshark](https://www.wireshark.org/) – Packet capture and protocol analysis tool.
+- [TCPDump](https://www.tcpdump.org/) & `libpcap` – Command-line packet capture and analysis tools.
+- [NetworkMiner](https://www.netresec.com/?page=NetworkMiner) – Network forensic analysis tool.
+- [tcpflow](https://github.com/simsong/tcpflow) – Captures and reconstructs TCP flows from packet captures.
+- `tcptrace` – Command-line tool for analyzing TCP dump files.
+- [Arkime](https://arkime.com/) (formerly Moloch) – Full-packet-capture indexing and search platform.
 - **Note:** [Microsoft Message Analyzer](https://techcommunity.microsoft.com) (retired 2019)
 
 ---
+
 ### Netwox Suite (no longer actively maintained)
 
 - [`netwox`](https://linux.die.net/man/1/netwox) – Toolbox for network testing.
@@ -39,57 +41,74 @@ title: Network Applications and Protocols
   - `netwag` – GUI front-end for netwox.
   
 ---
-## Active Capture / Interception
+
+## Network Monitoring & Intrusion Prevention
 
 - [Suricata](https://suricata.io/) – IDS/IPS engine with full packet logging capabilities.
-- [Arkime](https://arkime.com/) (formerly Moloch) – Scalable full-packet-capture and search platform.
+
+---
+
+## Active Capture / Interception
+
 - [Mallory](https://github.com/IntrepidusGroup/Mallory) – MITM gateway proxy.
 - [Ettercap](https://www.ettercap-project.org/) – Advanced MITM tool for LANs.
 
 ---
+
 ## Connectivity & Port Scanning
 
 - [Nmap](https://nmap.org/) – Network mapping and port scanning.
 - [Masscan](https://github.com/robertdavidgraham/masscan) – Fast port scanner.
 - [netcat](https://nc110.sourceforge.io/) – Send and receive data over arbitrary TCP/UDP ports.
 - [Hping](http://www.hping.org/) – Network tool for security auditing.
-- [curl](https://curl.se/) / [wget](https://www.gnu.org/software/wget/) – CLI tools for data transfer.
-- [HTTPie](https://httpie.io/) – User-friendly HTTP client.
 - [netdiscover](https://github.com/netdiscover-scanner/netdiscover) – Discover live hosts on a network.
 
 ---
+
+## Network Services & Protocol Utilities
+
+- [curl](https://curl.se/) / [wget](https://www.gnu.org/software/wget/) – Command-line tools for transferring data over network protocols.
+- [HTTPie](https://httpie.io/) – User-friendly command-line HTTP client.
+- [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) – Lightweight DNS forwarder and DHCP server.
+
+---
+
 ## Web Testing / Proxies
 
 - [Burp Suite](https://portswigger.net/burp) – Web app security testing tool.
 - [OWASP ZAP](https://www.zaproxy.org/) – Open-source web app scanner.
 - [mitmproxy](https://mitmproxy.org/) – SSL-capable HTTP proxy.
 - [Charles Proxy](https://www.charlesproxy.com/) – GUI HTTP proxy.
+- [Fiddler](https://www.telerik.com/fiddler) – HTTP debugging proxy.
 - [w3af](https://github.com/andresriancho/w3af) – Web app attack and audit framework.
-- [HTTrack](https://www.httrack.com/) – Website copier tool.
+- [HTTrack](https://www.httrack.com/) – Website copier and offline browsing tool.
   
 ---
+
 ## Network Spoofing
-- [Ettercap](https://www.ettercap-project.org/) – MITM tool for network traffic manipulation.
+
 - [arpspoof](https://linux.die.net/man/8/arpspoof) – Simple ARP spoofer.
-- [DNSMasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) – Lightweight DNS/DHCP server.
   
 ---
+
 ## System Utilities
 
 - [Sysinternals Suite](https://learn.microsoft.com/en-us/sysinternals/) – Windows system utilities.
 - [NirSoft](https://www.nirsoft.net/) – Small Windows utilities, including password tools.
 
 ---
+
 ## API Development
 
 - [Postman](https://www.postman.com/) – API testing and development.
-- [Fiddler](https://www.telerik.com/fiddler) – HTTP debugging proxy.
 - [RESTful Tutorial](https://restfulapi.net/) – Concepts of REST APIs.
 
 ---
+
 ## Supplemental Material
 
 ### Interactive Learning
+
 - [Interactive Exercises](http://gaia.cs.umass.edu/kurose_ross/interactive/) – Companion to the Kurose & Ross textbook with quizzes and animations.
 - [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html) – A hands-on guide to socket programming in C.
 - [High Performance Browser Networking](https://hpbn.co/) – What every web developer should know about networking and web performance.
@@ -98,11 +117,15 @@ title: Network Applications and Protocols
 - [Programmable Web](https://www.programmableweb.com/) – (Retired) Formerly a hub for APIs and mashups.
 
 ---
+
 ### Code Repositories
+
 - [BIND 9 GitLab Repository](https://gitlab.isc.org/isc-projects/bind9) – Source code and issue tracker for the BIND DNS server.
 
 ---
+
 ### Key References
+
 - [Root Servers Map](https://root-servers.org/) – Overview of global DNS root server infrastructure.
 - [IANA – Internet Assigned Numbers Authority](https://www.iana.org/)
 - [Service Name & Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
@@ -114,6 +137,7 @@ title: Network Applications and Protocols
 - [The Wayback Machine](https://web.archive.org/)
 
 ---
+
 ## Key References & RFCs
 
 See the [RFC Index](https://datatracker.ietf.org/doc/) for official protocol specs. Notable examples:
