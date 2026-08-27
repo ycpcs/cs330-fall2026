@@ -29,5 +29,6 @@ This is your central hub for all course-related information, including announcem
 * **Nov 10** - Exam 3
 * **Oct 20** - Exam 2
 * **Sep 22** - Exam 1
+* **Sep 03** - [Wireshark Explorer](assignments/wireshark-intro.md) Due
 * **Aug 27** - [Ethics and Legal Responsibilities](assignments/ethics.html) Due
 * **Aug 24** - Welcome back!
