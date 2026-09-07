@@ -18,5 +18,6 @@ This page lists the homework assignments, labs, and programming assignments for 
 > ---------- | ---- | ------ | --- |
 > [Ethics and Legal Responsibilities](ethics.html) | n/a | n/a | Aug 27, 2026 |
 > [Wireshark Explorer](wireshark-intro.md) | n/a | 50 | Set 03 2026 |
+> [Chapter 1 Homework](chapter-1.html) | | 150 | Sept 14, 2026 |
 
 <sup>*</sup> Programming Assignment
