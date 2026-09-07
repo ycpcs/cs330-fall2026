@@ -1,10 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: "Homework: Chapter 1"
+title: "Network Applications and Protocols"
 ---
 
-# Chapter 1 Homework
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330 Homework: Chapter 1
+
+## Due: Tuesday, Sep 15, 2026 by 11:59 PM
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ## Network Transmission Scenario (15 pts)
 Consider a single router transmitting packets, each of size **_L_ bits**, over a single link to another router. The link has a transmission rate of **_R_ Mbps**.
