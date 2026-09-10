@@ -24,7 +24,8 @@ title: Network Applications and Protocols
 
 ### Passive Capture
 
-- [Wireshark](https://www.wireshark.org/) – Packet capture and protocol analysis tool.
+- [Wireshark](https://www.wireshark.org/) – Packet capture and protocol analysis tool.  
+  - [Sample Captures](https://wiki.wireshark.org/samplecaptures)
 - [TCPDump](https://www.tcpdump.org/) & `libpcap` – Command-line packet capture and analysis tools.
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner) – Network forensic analysis tool.
 - [tcpflow](https://github.com/simsong/tcpflow) – Captures and reconstructs TCP flows from packet captures.
