@@ -1,12 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: "Introduction to Sockets"
+title: "Network Applications and Protocols"
 ---
 
-# Programming Lab - Introduction to Sockets
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
----
+## CS 330: Introduction to Sockets
+
+## Due: Tuesday, Sep 22, 2026 by 11:59 PM
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ## Overview
 

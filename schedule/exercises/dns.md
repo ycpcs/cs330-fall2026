@@ -8,7 +8,7 @@ title: "Network Applications and Protocols"
 
 ## CS 330: Exploring DNS Using `nslookup` and Wireshark
 
-## ## Due: Tuesday, Sep 22, 2026 by 11:59 PM
+## Due: Tuesday, Sep 22, 2026 by 11:59 PM
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
