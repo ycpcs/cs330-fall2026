@@ -1,10 +1,16 @@
 ---
 layout: default
 course_number: CS330
-title: "Exploring DNS"
+title: "Network Applications and Protocols"
 ---
 
-# Class Exercise: Exploring DNS Using `nslookup` and Wireshark
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Exploring DNS Using `nslookup` and Wireshark
+
+## ## Due: Tuesday, Sep 22, 2026 by 11:59 PM
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 ## Objective
 
@@ -28,7 +34,7 @@ ipconfig /all
 
 ### Answer:
 
-- What is the IP address of your **DNS server**?
+- What is the IP address of the **DNS server(s)** configured on your system? If more than one is listed, record the one your computer is currently using or note the full set of configured servers.
 
 ---
 
@@ -72,9 +78,21 @@ This will isolate DNS query and response packets.
 
 ### Questions:
 
-1. What **protocol** is used for DNS — UDP or TCP? Why?  
+1. What **transport layer protocol** is used for DNS queries and responses — UDP or TCP? Why?  
 2. What **port number** is used for DNS traffic?  
 3. What is the **IP address** of the DNS server your computer queried?
+
+> Note: Most DNS lookups use **UDP** because the queries are small and fast. DNS may use **TCP** for larger responses, zone transfers, or when a UDP response exceeds the size limit.
+
+### What to Look for in Wireshark
+
+When you inspect packets, pay attention to:
+
+- **Source and destination IP addresses**
+- **Source and destination ports**
+- Whether the packet is a **query** or a **response**
+- The **DNS record type** (for example, `A`, `NS`, or `MX`)
+- The **answer section** and returned values
 
 ---
 
@@ -83,13 +101,14 @@ This will isolate DNS query and response packets.
 ### Step 1: Follow a DNS Conversation
 
 1. In the packet list, locate a DNS **query packet**.
-2. Right-click on it and choose **Follow → UDP Stream** (if available).
+2. Right-click on it and choose **Follow → UDP Stream**.
 
 #### Answer:
 
 4. Which **domain name** was queried?  
-5. Was the response **successful?**  
-6. What **IP address** was returned?
+5. Was the response **successful**?  
+6. What **IP address** was returned?  
+7. What **transport layer protocol** and **port** were used for this DNS exchange?
 
 ---
 
@@ -100,42 +119,58 @@ This will isolate DNS query and response packets.
 
 #### Answer:
 
-7. What is the **mail server domain name** listed in the response?  
-8. What is its **priority value**?  
-9. Was the response **authoritative**? How can you tell?
+8. What is the **mail server domain name** listed in the response?  
+9. What is its **priority value**?  
+10. Was the response **authoritative**? How can you tell?
 
 ---
 
 ## Discussion Questions
 
-10. What are the differences between **A**, **NS**, and **MX** records?  
-11. How is **DNS resolution affected by caching**?  
-12. Why is it important for **security tools to monitor DNS traffic**?
+11. What are the differences between **A**, **NS**, and **MX** records?  
+12. How is **DNS resolution affected by caching**?  
+13. Why is it important for **security tools to monitor DNS traffic**?
 
 ---
 
-## Compare with Online Tools and Alternate DNS Servers
+## Compare DNS Results Across Different Sources
 
-### Try the following:
+In this part, compare the DNS results you observed earlier with information from other tools and servers. Choose at least two of the following methods and record the results for the same domain(s):
 
-- Go to: [https://dnschecker.org/](https://dnschecker.org/)  
-- Or use a public DNS server like Cloudflare’s in the terminal:
+### Option 1: Use an online DNS checker
+
+Go to [https://dnschecker.org/](https://dnschecker.org/) and look up a domain such as `google.com`.
+
+### Option 2: Query a public DNS server
+
+Use a public resolver such as Cloudflare:
 
 ```bash 
 nslookup -type=A google.com 1.1.1.1
 ```
 
-You may also open the **Developer Tools** in your browser, go to the **Network tab**, and observe DNS requests when you visit a domain.
+### Option 3: Inspect browser DNS requests
 
-#### Question:
+Open the **Developer Tools** in your browser, go to the **Network** tab, and reload a page. Look for DNS requests and note what domain names and IP addresses appear.
 
-13. How consistent are the DNS responses across:
+### What to record:
+
+For each source, note:
+
+- the domain name queried,
+- the returned IP address (if any),
+- whether the result matched the result from your earlier `nslookup` and Wireshark analysis,
+- any differences in timing, server used, or record type shown.
+
+#### Questions:
+
+14. How consistent were the DNS responses across:
 - Command line (`nslookup`)
 - Wireshark capture
 - Online DNS tools
 - Browser Developer Tools
 
-14. Why might DNS responses differ across tools or servers?
+15. Why might DNS responses differ across tools or servers?
 
 ---
 
@@ -151,4 +186,4 @@ Please submit the following:
 - A **screenshot** showing a DNS MX record with details expanded.  
 - Summary of observations from online DNS tools.
 
-> Double-check that your screenshots clearly show packet details and are legible.
+> Double-check that your screenshots clearly show packet details and are legible. 
