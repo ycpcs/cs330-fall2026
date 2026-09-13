@@ -29,6 +29,9 @@ This is your central hub for all course-related information, including announcem
 * **Nov 10** - Exam 3
 * **Oct 20** - Exam 2
 * **Sep 22** - Exam 1
+* **Sep 22** - [Introduction to Sockets](assignments/sockets.html) Due
+* **Sep 22** - In-class [Exploring DNS](schedule/exercises/dns.md) Due
+* **Sep 22** - In-class [Analyzing FTP](schedule/exercises/ftp.md) Due
 * **Sep 15** - [Chapter 1 Homework](assignments/chapter-1.html) Due
 * **Sep 03** - [Wireshark Explorer](assignments/wireshark-intro.md) Due
 * **Aug 27** - [Ethics and Legal Responsibilities](assignments/ethics.html) Due
