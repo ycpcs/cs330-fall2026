@@ -85,7 +85,7 @@ Exam 2 - Oct 20, 2026
 - **Format:** Open-book, open-notes.
 - **Duration:** Entire class period.
 - **Content:** May include a **programming component**.
-- **Number of Exams:** 4 total. The **lowest score will be dropped**.
+- **Number of Exams:** 4 total. 
 - **Make-Up Policy:**
   - Make-up exams require **prior approval** unless due to **documented emergency or illness**.
 

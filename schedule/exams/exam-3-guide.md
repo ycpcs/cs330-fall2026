@@ -101,7 +101,7 @@ Be able to list and explain key services:
 - **Format:** Open-book, open-notes  
 - **Duration:** Full class period  
 - **Content:** May include a **programming component**  
-- **Total Exams:** 4 (the **lowest score is dropped**)  
+- **Total Exams:** 4 
 - **Make-Up Policy:**  
   - Requires **prior approval** unless due to a **documented emergency or illness**
 

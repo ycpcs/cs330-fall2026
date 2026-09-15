@@ -28,7 +28,7 @@ This is your central hub for all course-related information, including announcem
 * **Dec 10** - Final Exam 6:00PM - 8:00PM
 * **Nov 10** - Exam 3
 * **Oct 20** - Exam 2
-* **Sep 22** - Exam 1
+* **Sep 22** - Exam 1 [Study Guide](schedule/exams/exam-1-guide.html)
 * **Sep 22** - [Introduction to Sockets](assignments/sockets.html) Due
 * **Sep 22** - In-class [Exploring DNS](schedule/exercises/dns.md) Due
 * **Sep 22** - In-class [Analyzing FTP](schedule/exercises/ftp.md) Due
