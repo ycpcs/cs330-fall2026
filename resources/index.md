@@ -145,6 +145,7 @@ See the [RFC Index](https://datatracker.ietf.org/doc/) for official protocol spe
 
 - **HTTP:** RFC 7230–7235, RFC 7540 (HTTP/2), draft for HTTP/3.
 - **DNS:** RFC 1034, RFC 1035, RFC 8484 (DoH).
+- **FTP:** RFC 959.
 - **TCP:** RFC 793, RFC 1122, RFC 5681.
 - **UDP:** RFC 768, RFC 8085.
 - **IP:** RFC 791, RFC 2460 (IPv6), RFC 1958.
