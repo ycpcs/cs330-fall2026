@@ -100,7 +100,7 @@ When you inspect packets, pay attention to:
 
 ### Step 1: Follow a DNS Conversation
 
-Use the same domain name you queried with `nslookup` and examine the DNS **query packet**.
+Find the same domain name you queried with `nslookup` and examine the DNS **query packet**.
 
 1. In the packet list, locate a DNS **query packet**.
 2. Right-click on it and choose **Follow → UDP Stream**.
