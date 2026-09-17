@@ -100,6 +100,8 @@ When you inspect packets, pay attention to:
 
 ### Step 1: Follow a DNS Conversation
 
+Use the same domain name you queried with `nslookup` and examine the DNS **query packet**.
+
 1. In the packet list, locate a DNS **query packet**.
 2. Right-click on it and choose **Follow → UDP Stream**.
 
@@ -108,7 +110,10 @@ When you inspect packets, pay attention to:
 4. Which **domain name** was queried?  
 5. Was the response **successful**?  
 6. What **IP address** was returned?  
-7. What **transport layer protocol** and **port** were used for this DNS exchange?
+7. What **transport layer protocol** and **port** were used for this DNS exchange?  
+8. Examine the DNS **query message**. How many **"questions"** does this DNS message contain? How many **"answers"** does it contain?  
+9. Examine the DNS **response message** to the initial query message. How many **"questions"** does this DNS message contain? How many **"answers"** does it contain? 
+10. To what IP address is the DNS query message sent? Is this the IP address of your default local DNS server?
 
 ---
 
@@ -119,17 +124,17 @@ When you inspect packets, pay attention to:
 
 #### Answer:
 
-8. What is the **mail server domain name** listed in the response?  
-9. What is its **priority value**?  
-10. Was the response **authoritative**? How can you tell?
+10. What is the **mail server domain name** listed in the response?  
+11. What is its **priority value**?  
+12. Was the response **authoritative**? How can you tell?
 
 ---
 
 ## Discussion Questions
 
-11. What are the differences between **A**, **NS**, and **MX** records?  
-12. How is **DNS resolution affected by caching**?  
-13. Why is it important for **security tools to monitor DNS traffic**?
+13. What are the differences between **A**, **NS**, and **MX** records?  
+14. How is **DNS resolution affected by caching**?  
+15. Why is it important for **security tools to monitor DNS traffic**?
 
 ---
 
@@ -164,13 +169,13 @@ For each source, note:
 
 #### Questions:
 
-14. How consistent were the DNS responses across:
+16. How consistent were the DNS responses across:
 - Command line (`nslookup`)
 - Wireshark capture
 - Online DNS tools
 - Browser Developer Tools
 
-15. Why might DNS responses differ across tools or servers?
+17. Why might DNS responses differ across tools or servers?
 
 ---
 
