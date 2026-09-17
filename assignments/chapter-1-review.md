@@ -132,6 +132,7 @@ Round all your answers to **two decimal places after leading zeros**.
   <code>
   (29 choose 16) * 𝑝<sup>16</sup> ∗ (1 − 𝑝)<sup>(29-16)</sup> = (29 choose 16) * 0.20<sup>16</sup> * 0.80<sup>(29-16)</sup> ~ 0.000024450 ~ 0.0000245
   </code>
+  <br/>
   <a href="https://www.wolframalpha.com/input?i=%2829+choose+16%29+*+0.2%5E16+*+0.8%5E%2829-16%29">Wolfram Alpha</a>
 
 
@@ -139,6 +140,9 @@ Round all your answers to **two decimal places after leading zeros**.
   <br/>
   <code>
    Sum{(29 choose n) * p <sup>n</sup> * (1 - p)<sup>(29 - n)</sup>}, for n = 16 to 29 => sum{(29 choose n) * 0.20<sup>n</sup> * 0.80<sup>(29-n)</sup>}, for n = 16 to 29 => 0.000030032 ~ 0.00003
+  </code>
+  <br/>
+  <a href="https://www.wolframalpha.com/input?i=sum%7B%2829+choose+n%29+*+0.20%5En+*+0.80%5E%2829-n%29%7D%2C+for+n+%3D+16+to+29">Wolfram Alpha</a>
 
 ## TCP/IP Stack Concept Check (5 pts)
 Which layer of the **TCP/IP protocol stack** is responsible for **handling messages from various network applications**?
