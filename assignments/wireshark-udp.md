@@ -8,7 +8,7 @@ title: "Network Applications and Protocols"
 
 ## CS 330: Analyzing UDP Traffic with Wireshark
 
-## Due: Tuesday, Oct 6, 2026 by 11:59 PM
+## Due: Tuesday, Oct 06, 2026 by 11:59 PM
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
