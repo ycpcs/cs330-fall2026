@@ -22,5 +22,6 @@ This page lists the homework assignments, labs, and programming assignments for 
 > [Exploring DNS](../schedule/exercises/dns.md) | n/a | 50 | Sep 22, 2026 |
 > [Analyzing FTP](../schedule/exercises/ftp.md) | n/a | 50 | Sep 22, 2026 |
 > [Introduction to Sockets](sockets.html) * | n/a | 125 | Sept 22, 2026 |
+> [Analyzing UDP](wireshark-udp.html) | n/a | 50 | Oct 06, 2026 |
 
 <sup>*</sup> Programming Assignment
