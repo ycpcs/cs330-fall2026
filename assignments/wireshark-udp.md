@@ -137,6 +137,11 @@ For the **response packet**:
 
 ---
 
+### 8. UDP Checksum
+
+22.  In the DNS request packet, what UDP checksum value does Wireshark show, and does Wireshark report it as valid? 
+---
+
 ## What to Look For in Wireshark
 
 When you examine the packets, pay attention to:
