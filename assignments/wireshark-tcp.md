@@ -121,7 +121,7 @@ EstimatedRTT = (1 - α) * EstimatedRTT + α * SampleRTT
 
 Use `α = 0.125`, and let the initial EstimatedRTT equal the RTT of the first segment.
 
-> Tip: Use **Statistics → TCP Stream Graph → Round Trip Time Graph** in Wireshark for visual RTT inspection.
+> Tip: Use **Statistics -> TCP Stream Graph -> Round Trip Time Graph** in Wireshark for visual RTT inspection.
 
 ---
 
@@ -174,7 +174,7 @@ Use `α = 0.125`, and let the initial EstimatedRTT equal the RTT of the first se
 To visualize how data was sent over time:
 
 1. Select a TCP segment sent from the client.
-2. Go to **Statistics → TCP Stream Graph → Time-Sequence Graph (Stevens)**.
+2. Go to **Statistics -> TCP Stream Graph -> Time-Sequence Graph (Stevens)**.
 3. Observe the shape of the graph.
 
 ### Questions
