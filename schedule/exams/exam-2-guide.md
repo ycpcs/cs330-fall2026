@@ -1,94 +1,120 @@
 ---
 layout: default
 course_number: CS330
-title: "Exam 2 - Study Guide"
+title: Network Applications and Protocols
 ---
 
-Exam 2 - Oct 20, 2026
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## CS 330: Exam 2
+
+## Date: Oct 20, 2026
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+Chapter 3
 -----------------------
 
-## Topics to Review
+This exam is really a check on whether you understand how the transport layer makes communication work between applications. You do not need to memorize every detail in a vacuum; you need to understand what each mechanism is doing, why it exists, and how the pieces fit together.
 
-### 1. **Multiplexing and Demultiplexing**
-   - **Understand** how multiple applications share the same network connection.
-   - **Study** how **port numbers** are used to identify different data streams (source and destination ports).
-   - **Make sure you can explain** the difference between **multiplexing** and **demultiplexing**.
+## What to focus on
 
-### 2. **TCP and UDP Overview**
-   - **Understand** the differences between **TCP** and **UDP**.
-   - **Study** the **use cases** where TCP is preferred versus UDP.
-   - **Make sure you can explain** the trade-offs.
+### 1. Why the transport layer matters
+- Be comfortable explaining the job of the **transport layer**: it sits between application programs and the network, and it handles communication between processes.
+- Know the difference between **multiplexing** and **demultiplexing**.
+- Understand how **port numbers** are used to identify different application flows.
+- Be able to explain how multiple applications can share the same host and network connection without mixing data together.
 
-### 3. **TCP Services**
-   - **Understand** the following key features of TCP:
-     - Reliable delivery.
-     - Flow control.
-     - Stream-oriented nature (continuous data flow).
-   - **Make sure you can explain** how TCP handles data delivery and **congestion**.
+### 2. UDP: simple and lightweight
+- Review the basic idea of **UDP** and when it is useful.
+- Know that UDP is **connectionless**, **best-effort**, and does not provide retransmission, ordering, or flow control.
+- Understand the purpose of the **UDP header**, including source and destination ports, length, and checksum.
+- Be ready to compare **UDP vs. TCP** in terms of reliability, overhead, and use cases.
 
-### 4. **Connection Management (TCP)**
-   - **Understand** the **three-way handshake** process.
-   - **Study** the process for **connection termination**.
-   - **Ensure you can articulate** how a TCP connection is established and terminated, including the roles of sequence numbers and acknowledgments.
+### 3. Reliable data transfer
+- Know why reliable transfer matters and what problems it solves.
+- Review the idea of **ACKs**, **sequence numbers**, **timeouts**, and **retransmissions**.
+- Understand the difference between **stop-and-wait** and more advanced schemes, even if the exam will not require a full protocol design from scratch.
+- Be able to explain what a **finite state machine (FSM)** is in the context of reliable transfer and why it matters for protocol behavior.
 
-### 5. **Error Detection**
-   - **Understand** how **checksums** are used in both TCP and UDP to detect errors.
-   - **Examine** the difference between error detection in TCP (reliable) vs. UDP (optional but essential in IPv6).
-   - **Make sure you can explain** how checksum fields in both protocols help ensure data integrity.
+### 4. TCP services and design goals
+- Understand the main features of **TCP**:
+  - Reliable delivery
+  - In-order delivery
+  - Flow control
+  - Congestion control
+  - A byte-stream abstraction
+- Know that TCP provides a **connection-oriented** service, even though it is still sending packets through an IP network.
+- Be ready to explain how TCP turns a stream of bytes into packets and then reassembles them correctly at the receiver.
 
-### 6. **Reliable Data Transfer (TCP)**
-   - **Understand** the **finite state machine** of TCP (review slides).
-   - **Be ready to define** how TCP handles retransmissions and ensures data is delivered in order, without loss.
+### 4a. Flow control
+- Understand that **flow control** is different from **congestion control**.
+- Know that flow control is about making sure the **receiver is not overwhelmed** by data it cannot process or buffer fast enough.
+- Review the idea of the **receive window** and how the receiver tells the sender how much more data it is willing to accept.
+- Be ready to explain how **advertised window size** helps match sender transmission to receiver capacity.
+- Understand that flow control protects the receiver, while congestion control protects the network as a whole.
+- If you can explain why a sender might need to slow down even when the network is fine, you are on the right track.
 
-### 7. **Round-Trip Time (RTT) and Timeouts**
-   - **Review** the concept of **RTT** (time for a round trip between sender and receiver).
-   - **Study** how **RTT** is used to dynamically adjust **timeouts** in TCP for retransmissions.
-   - **Make sure you can explain** how RTT is measured and why accurate RTT estimation is critical for TCP performance.
+### 5. Connection management
+- Review the **three-way handshake**: SYN, SYN/ACK, ACK.
+- Understand why sequence numbers and acknowledgments are needed.
+- Know how TCP establishes a connection and how it closes one cleanly.
+- Be able to explain the difference between connection establishment and connection teardown, and why both are necessary.
 
-### 8. **Congestion Control**
-   - **Understand** the phases of TCP congestion control:
-     - **Slow Start**: Gradually increase the window size to avoid overwhelming the network.
-     - **Congestion Avoidance**: When the network gets congested, slow down the transmission rate.
-     - **Fast Retransmit/Fast Recovery**: Recover from lost packets more efficiently.
-   - **Master** the **AIMD** (Additive Increase, Multiplicative Decrease) algorithm used in congestion control.
-   - **Know how to convey** the different congestion control algorithms and how they avoid network congestion.
+### 6. RTT, timeout estimation, and loss recovery
+- Know what **RTT** means and why it matters.
+- Understand how TCP uses **RTT** to set timeouts and estimate when a packet may have been lost.
+- Review the idea of **retransmission** and why a timeout that is too short or too long is a problem.
+- Be comfortable explaining why accurate RTT estimation is important for good performance.
 
-### 9. **UDP**
-   - **Understand** the characteristics of UDP     
-   - **Study** the **UDP header** format and how it differs from TCP.
-   - **Make sure you can explain** the trade-offs of using UDP over TCP, including the lack of error recovery and flow control.
+### 7. Congestion control
+- This is one of the big ideas in Chapter 3.
+- Know the basic phases of **TCP congestion control**:
+  - **Slow Start**
+  - **Congestion Avoidance**
+  - **Fast Retransmit**
+  - **Fast Recovery**
+- Understand the idea of **AIMD**: additive increase, multiplicative decrease.
+- Be ready to explain how TCP slows down when the network is congested and speeds up again when conditions improve.
+- Make sure you understand the purpose of congestion control: keep the network stable without starving other traffic.
 
-### 10. **Sockets and Socket Types**
-   - **Understand** the types of sockets:
-     - **SOCK_STREAM**: Used for TCP (stream-oriented).
-     - **SOCK_DGRAM**: Used for UDP (datagram-oriented).
-   - **Be capable of demonstrating** the differences in socket types and how each is used in application development.
-
-### 11. **Programming Component**
-   - **Understand** how to create basic **TCP and UDP socket programs**.
-   - **Review** how to create sockets in `C` and how they are used to establish connections or send data.
-   - **Study** how data is sent and received over sockets, including the **client-server model**.
-   - **Have a firm grasp of** how to write simple socket-based programs for both TCP (reliable) and UDP (faster, no connection).
-     - Review code examples in Python or C.
+### 8. TCP vs. UDP in plain English
+- Be able to compare them directly.
+- **TCP** is better when you need reliability, ordering, and a controlled data stream.
+- **UDP** is better when speed, simplicity, and low overhead matter more than guaranteed delivery.
+- If you can explain the trade-off in a sentence, you are in good shape.
 
 ---
 
-## Additional Study Tips:
+## Quick self-check questions
 
-- **Finite State Machine for TCP**: Review **state transitions** from the slides. Understand how TCP ensures reliable delivery using these states.
-- **Interactive RTT Tool**: Use the [TCP RTT Simulator](https://gaia.cs.umass.edu/kurose_ross/interactive/TCP_RTT.php) to understand how RTT affects TCP performance and retransmissions.
+If you can answer these without looking at your notes, you are in a strong position:
 
+- What is the difference between multiplexing and demultiplexing?
+- Why do we use port numbers in transport-layer communication?
+- What problem does TCP solve that UDP does not?
+- Why do we need sequence numbers and acknowledgments?
+- How does flow control prevent a fast sender from overwhelming a slow receiver?
+- What happens during the TCP three-way handshake?
+- Why does TCP need congestion control?
+- What is the purpose of a timeout in reliable data transfer?
+- How is UDP different from TCP in terms of reliability and overhead?
+- Why are sockets important when building network applications?
+- How does TCP deal with lost packets without completely collapsing performance?
+- Review the **TCP FSM** from the slides and make sure you can describe the main states and transitions in words.
+- 
 ---
 
 ## Exam Guidelines
 
 - **Format:** Open-book, open-notes.
 - **Duration:** Entire class period.
-- **Content:** May include a **programming component**.
-- **Number of Exams:** 4 total. 
-- **Make-Up Policy:**
-  - Make-up exams require **prior approval** unless due to **documented emergency or illness**.
+- **Content:** May include a programming component and\or a Wireshark portion.
+- **Number of Exams:** 4 total.
+- **Make-Up Policy:** Make-up exams require prior approval unless due to a documented emergency or illness.
 
 ---
+
+This chapter is not about memorizing a bunch of isolated definitions. It is mostly about understanding how data gets from one application to another reliably, how loss and congestion are handled, and how the transport layer balances performance with correctness.
 
 Good luck with your exam prep!

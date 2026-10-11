@@ -27,7 +27,7 @@ This is your central hub for all course-related information, including announcem
 
 * **Dec 10** - Final Exam 6:00PM - 8:00PM
 * **Nov 10** - Exam 3
-* **Oct 20** - Exam 2
+* **Oct 20** - Exam 2 [Study Guide](schedule/exams/exam-2-guide.html)
 * **Oct 13** - [Analyzing TCP](assignments/wireshark-tcp.html) Due
 * **Oct 08** - [Reliable Data Transfer](assignments/rdt.html) Due
 * **Oct 06** - [Analyzing UDP](assignments/wireshark-udp.html) Due
