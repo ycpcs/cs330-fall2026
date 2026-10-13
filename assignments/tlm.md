@@ -1,65 +1,93 @@
 ---
 layout: default
 course_number: CS330
-title: "Programming Assignment: Three Letter Match"
+title: "Programming Assignment: Three Letter Word Match"
 ---
 
-## Lab Summary: Three Letter Match
-In this lab, you will modify the existing _tcp_client_ and _tcp_server_ programs to implement the word game *Three Letter Match*. The goal is to select a random three-letter combination and challenge yourself (as the player) to find as many valid dictionary words as possible that contain that substring.
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
----
+## CS 330: Three Letter Word Match
 
-### Game Rules and Functionality Overview
+## Due: Tuesday, Nov 12, 2026 by 11:59 PM
 
-1. **Selecting the Substring**
-   - The client starts by choosing a three-letter substring and sends it to the server using the `Set` command.
-   - The substring must contain only alphabetic characters (no numbers or symbols).
-   - Comparisons should be case-insensitive.
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-2. **Dictionary Validation**
-   - The server will validate submitted words using the dictionary file [words](files/words.txt).
-   - The client should not have direct access to the dictionary file.
+## Overview
 
-3. **Submitting Words**
-   - The client submits words using the `Submit` command.
-   - The server checks two conditions:
-     - **Validity:** The word must exist in the dictionary.
-     - **Substring Match:** The word must contain the selected three-letter substring.
+In this assignment, you will extend the basic client/server socket programs to implement a networked word game called Three Letter Match. The server manages the active substring, validates submitted words against a dictionary, tracks client scores, and responds to commands that allow a player to participate in the game.
 
-4. **Scoring**
-   - If the word is valid and contains the substring, the client earns **+1 point**.
-   - If the word is invalid or does not contain the substring, the client loses **1 point**.
-   - Repeated submissions of the same word should not earn additional points.
-
-5. **Listing Words**
-   - The `List` command displays all dictionary words containing the current substring.
-   - After listing, the client may continue submitting guesses unless the game has ended.
-
-6. **Ending the Game**
-   - The `Quit` command ends the game and displays the client’s final score.
-
-7. **Available Commands**
-   1. `Set`: Choose a new three-letter substring.
-   2. `Submit`: Submit a word to check for validity and substring match.
-   3. `List`: Request all words containing the current substring.
-   4. `Quit`: Exit the game and display the final score.
-
-8. **Client Input & Output**
-   - All commands are read from standard input.
-   - Responses (e.g., results, score updates, error messages) are displayed on standard output.
-   - Each message sent between client and server should be newline-terminated ASCII text (e.g., `SUBMIT later\n`).
-
-9. **Server Behavior**
-   - The server runs continuously and may handle multiple clients.
-   - It should remain active until explicitly terminated or instructed to shut down.
-
-10. **Buffer Limits**
-    - The maximum buffer size for client messages is **512 bytes**.
+The goal is to help you practice the core skills introduced in the networking units: socket programming, server/client communication, input validation, concurrency, and structured documentation.
 
 ---
 
-### Example Client–Server Interaction
+## Objective
 
+The objective of this assignment is to modify or build a TCP-based client/server application so that:
+
+1. The client can choose a three-letter substring.
+2. The server validates that substring and dictionary entries.
+3. The client can submit words and receive score updates.
+4. The server can list matching words for the current substring.
+5. The server can handle multiple clients and maintain correct per-client score state.
+
+By completing the assignment, you will gain practical experience in networked application design, concurrency, protocol handling, and robust error checking.
+
+---
+
+## Game Rules and Functionality
+
+### 1. Selecting the Substring
+- The client starts by choosing a three-letter substring and sends it to the server using the `SET` command.
+- The substring must contain only alphabetic characters.
+- Comparisons should be case-insensitive.
+- Invalid input should be rejected with a clear error message.
+
+### 2. Dictionary Validation
+- The server validates submitted words using the dictionary file [words](files/words.txt).
+- The client **must not have** direct access to the dictionary file.
+- A word is valid only if it appears in the dictionary.
+
+### 3. Submitting Words
+- The client submits guesses using the `SUBMIT` command.
+- The server checks both conditions:
+  - The word exists in the dictionary.
+  - The word contains the selected substring.
+
+### 4. Scoring
+- If a valid word contains the selected substring, the client earns `+1` point.
+- If the word is invalid or does not contain the substring, the client loses `-1` point.
+- Repeated submissions of the same word should not award additional points.
+
+### 5. Listing Words
+- The `LIST` command displays all dictionary words containing the active substring.
+- After a client sends `LIST`, no further points may be awarded for that round.
+- The client may not continue submitting guesses after `LIST`; the round is effectively ended until a new substring is chosen with `SET`.
+
+### 6. Ending the Game
+- The `QUIT` command ends the session and displays the final score.
+
+### 7. Available Commands
+1. `SET` — choose a new three-letter substring.
+2. `SUBMIT` — submit a word to check for validity and substring match.
+3. `LIST` — request all words containing the current substring.
+4. `QUIT` — exit the game and display the final score.
+
+### 8. Client Input and Output
+- All commands are read from standard input.
+- Responses are displayed on standard output.
+- The user must type a command and press the Enter key to send it.
+- Messages between the client and server should be newline-terminated ASCII text, for example `SUBMIT later\n`.
+
+### 9. Server Behavior
+- The server runs continuously and may handle multiple clients.
+- It should remain active until explicitly terminated or instructed to shut down.
+
+### 10. Buffer Limits
+- The maximum buffer size for client messages is **512 bytes**.
+
+---
+
+## Example Client–Server Interaction
 
 ```bash
 Client> SET ate
@@ -79,46 +107,52 @@ Server> Final score: 0
 Connection closed.
 ```
 
-### Client - Server Example Interaction Diagram 
-
-```text
-┌──────────┐             ┌────────────┐
-│  Client  │             │   Server   │
-└────┬─────┘             └────┬───────┘
-     │                         │
-     │  Connect (TCP Socket)   │
-     ├────────────────────────>│
-     │                         │
-     │  SET ate                │
-     ├────────────────────────>│
-     │                         │  Save substring = "ate"
-     │                         │  Respond "Substring set"
-     │<────────────────────────┤
-     │                         │
-     │  SUBMIT late            │
-     ├────────────────────────>│
-     │                         │  Check in dictionary
-     │                         │  Contains "ate" → +1 point
-     │<────────────────────────┤
-     │  "Valid! Score: 1"      │
-     │                         │
-     │  LIST                   │
-     ├────────────────────────>│
-     │                         │  Send all matches containing "ate"
-     │<────────────────────────┤
-     │                         │
-     │  QUIT                   │
-     ├────────────────────────>│
-     │                         │  Send final score, close socket
-     │<────────────────────────┤
-     │ Connection closed       │
-
-```
 ---
 
-### Design Decisions
+## Implementation Requirements
 
-When completing the lab, you must make and document several design choices. Include your reasoning for each decision in your code comments and README file.
+### 1. Connection Setup
+- The server listens on a specified TCP port.
+- The client connects to the server using an IP address and port number.
+- For local testing, students may use `127.0.0.1` (localhost) as the server IP.
+- The port should be passed as a command-line argument or otherwise clearly specified in the program interface.
+- Example usage:
+  ```bash
+  ./tlm_server 9000
+  ./tlm_client 127.0.0.1 9000
+  ```
+
+### 2. Server Requirements
+- Implement a TCP server that accepts connections from one or more clients.
+- Validate all command inputs before processing them.
+- Read the dictionary file and compare submitted words against it.
+- Track the current substring for each connected client or client session.
+- Maintain score state for each client.
+- Reject invalid commands or malformed input with clear feedback.
+
+### 3. Client Requirements
+- Implement a client that reads commands from standard input.
+- Send commands to the server over a TCP socket.
+- Display server responses clearly to the user.
+- Do not directly access the dictionary file from the client.
+- Handle repeated prompts and restart behavior correctly.
+
+### 4. Error Handling
+- Invalid substring lengths must be rejected.
+- Non-alphabetic characters must be rejected.
+- Empty input or malformed commands must be reported cleanly.
+- Duplicate submissions should not award points again.
+
+### 5. Concurrency and Data Structures
+- The server should be able to support multiple clients concurrently.
+- Use a reasonable design choice for storing scores, such as a dictionary keyed by client connection or socket descriptor.
+- Explain your concurrency approach in code comments and in the README.
+
+---
+
+## Design Decisions
+
+When completing the assignment, you must make and document several design choices. Include your reasoning for each decision in the source code comments and in your README.
 
 1. **Handling Multiple Clients**
    - How will the server handle multiple simultaneous clients?
@@ -130,13 +164,14 @@ When completing the lab, you must make and document several design choices. Incl
    - For example, you might use a dictionary or list that maps each connected client to its score.
    - Justify your chosen data structure.
 
-3. **Behavior After `List`**
-   - After a client uses `List`, can they continue submitting guesses?
-   - Decide whether the game should continue normally or if the client’s turn should pause or reset.
+3. **Behavior After `LIST`**
+   - After a client uses `LIST`, no more points may be awarded.
+   - The round ends immediately after `LIST`, and the client must choose a new substring with `SET` before submitting more guesses.
+   - Explain how your implementation enforces this rule and why it makes the game state predictable.
 
 4. **Handling Invalid Substrings**
-   - How should the server respond if a client submits a substring that isn’t exactly three letters long?
-   - Define clear error handling (e.g., reject and prompt to try again).
+   - How should the server respond if a client submits a substring that is not exactly three letters long?
+   - Define clear error handling, such as rejecting the input and prompting the user to try again.
 
 5. **General Input Validation**
    - How will you handle invalid input, such as empty strings or non-alphabetic characters?
@@ -144,37 +179,34 @@ When completing the lab, you must make and document several design choices. Incl
 
 ---
 
-### Documentation
+## Documentation Requirements
 
-1. **Code Comments**
-   - Include clear and meaningful comments throughout your code that explain:
-     - What changes you made to the original source.
-     - Why each change was made (design rationale).
-     - How you implemented the change.
-   - Lack of proper documentation will result in point deductions.
+### 1. Code Comments
+Include clear and meaningful comments throughout your code that explain:
+- what changes were made,
+- why the changes were necessary,
+- how the implementation works,
+- and what design decisions were made.
 
-2. **README File**
-   - Include a `README` file with your submission that provides:
-     - Instructions on how to run the client and server programs.
-     - A summary of the game rules.
-     - Descriptions of your key design decisions.
-     - Any setup or configuration instructions.
-     - Example commands and sample output (recommended).
+Lack of proper documentation will result in point deductions.
 
----
+### 2. README File
+Include a `README` file with your submission that contains:
+- instructions for compiling and running the client and server,
+- a summary of the game rules,
+- descriptions of the key design decisions,
+- setup or configuration notes,
+- and sample command usage and expected output.
 
-### Pair Work and Submission
-
-- If working in pairs, submit **one** copy of your code.
-- Both partners’ names must appear in:
-  - The source code comments, and
-  - The README file.
-- Both partners must contribute to all aspects of the project (design, coding, testing, documentation).
-- Submit your report and source files via [Marmoset](https://cs.ycp.edu/marmoset) by the due date listed in the syllabus.
+### 3. Pair Work and Submission
+- If working in pairs, submit one copy of the code.
+- Both partners’ names must appear in the source code comments and in the README.
+- Both partners must contribute to planning, coding, testing, and documentation.
+- Submit your report and source files via [Marmoset](https://cs.ycp.edu/marmoset) by the due date listed in the course syllabus.
 
 ---
 
-### References
+## References
 
 - [Linux Socket Interface](https://linux.die.net/man/7/socket)
 - [Beej’s Guide to Network Programming](https://beej.us/guide/bgnet/html/)
@@ -185,28 +217,31 @@ When completing the lab, you must make and document several design choices. Incl
 
 ---
 
-### Grading Criteria
+## Grading Criteria
 
-| Category                | Requirements                                                                                                   |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **README File**         | Clear instructions, rules, and design discussion                                                               |
-| **Compile & Run**       | Programs compile and run without errors                                                                        |
-| **Menu Flow**           | Supports Set → Submit → List → Quit sequence                                                                   |
-| **Consecutive Runs**    | Supports multiple rounds (Set after List)                                                                      |
-| **Score Tracking**      | Accurate scoring behavior                                                                                      |
-| **Multiple Clients**    | Server supports concurrent clients                                                                             |
-| **Static Buffer Limit** | All buffers ≤ 512 bytes                                                                                        |
-| **Error Handling**      | Gracefully handles: invalid substring length, invalid characters, duplicate submissions, and Submit after List |
-| **Test Substring**      | Use and test with substring `ate`                                                                              |
-| **Client Restrictions** | Client must not read or access `words.txt` directly                                                            |
+| Category                | Requirements                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **README File**         | Clear instructions, rules, and design discussion                                                                    |
+| **Compile & Run**       | Programs compile and run without errors                                                                             |
+| **Command Flow**        | Supports `SET` → `SUBMIT` → `LIST` → `QUIT` sequence, with `LIST` ending the round so no more points can be awarded |
+| **Consecutive Rounds**  | Supports multiple rounds and repeated substring changes after a new `SET`                                           |
+| **Score Tracking**      | Accurate scoring behavior                                                                                           |
+| **Multiple Clients**    | Server supports concurrent clients                                                                                  |
+| **Static Buffer Limit** | All buffers are at or under 512 bytes                                                                               |
+| **Error Handling**      | Gracefully handles invalid substring length, invalid characters, duplicate submissions, and invalid commands        |
+| **Test Substring**      | Uses and tests the substring `ate`                                                                                  |
+| **Client Restrictions** | Client does not read or access `words.txt` directly                                                                 |
 
 ---
 
-### Notes
+## Helpful Testing Notes
 
 > Example test for substring frequency:
+>
 > ```bash
 > cat words.txt | perl -nlE '$_=lc; $l=length; next if $l < 3; m/(.{3,$l})(?{ $freq{$1}++ })^/; END { say "$freq{$_} $_" for keys %freq }' | sort -rg | head -10
 > ```
+
+This is a useful way to examine how often particular substrings appear in the dictionary and to validate the expected behavior of your game logic.
 
 ---
