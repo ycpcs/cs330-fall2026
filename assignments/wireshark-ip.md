@@ -150,6 +150,8 @@ While the capture is running, open a terminal (or a second WSL terminal) and run
 dig -6 @2606:4700:4700::1111 AAAA youtube.com
 ```
 
+If `dig` is not installed, on Ubuntu or WSL install it with `sudo apt install dnsutils`. macOS usually includes `dig`; on other Linux distributions, install the package that provides `dig` using that distribution's package manager.
+
 Stop the Wireshark capture or stop `tcpdump` with **Ctrl+C**. If you used WSL, open the directory containing `ipv6-dns.pcap` with `explorer.exe .` and open the file in Wireshark. Use the display filter `ipv6 && dns` to find the request and its matching response. This requires IPv6 connectivity to the DNS server; if the lookup fails, try a network with IPv6 connectivity.
 
 If WSL reports `network unreachable`, it does not have a route to the IPv6 DNS server. If Windows itself has IPv6 connectivity, capture on the active Windows interface in Wireshark and run this in PowerShell instead:
