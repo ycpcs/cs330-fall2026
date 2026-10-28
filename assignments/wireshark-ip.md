@@ -8,7 +8,7 @@ title: "Network Applications and Protocols"
 
 ## CS 330: Analyzing IP Traffic with Wireshark
 
-## Due: See syllabus
+## Due: Tuesday, Nov 02, 2026 by 11:59 PM
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 

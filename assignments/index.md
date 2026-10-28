@@ -26,7 +26,7 @@ This page lists the homework assignments, labs, and programming assignments for 
 > [Reliable Data Transfer](rdt.html) | n/a | 75 | Oct 08, 2026 |
 > [Analyzing TCP](wireshark-tcp.html) | n/a | 75 | Oct 13, 2026 |
 > [Three Letter Word Match](tlm.html) * | n/a | 300 | Nov 12, 2026 |
-> [IP](wireshark-ip.md) | n/a | 100 | Nov 02, 2026 |
+> [IP](wireshark-ip.html) | n/a | 100 | Nov 02, 2026 |
 > 
 <sup>*</sup> Programming Assignment
 
