@@ -23,6 +23,10 @@ By the end of this lab, you should be able to:
 - recognize IPv4 fragments in a packet capture
 - and connect IP packet details to the data carried by the packet
 
+## Course Sample Capture
+
+You can use the [course sample capture](wireshark-ip-sample.pcap) to answer the questions in this lab. It includes IPv4 traceroute probes, fragmented large probes, an IPv6 DNS lookup, and unrelated background traffic to identify and filter out. The capture is generated for this exercise, not recorded from a real network. If you use it, skip the capture-generation steps and use the filters in each part; packet numbers and addresses will match the sample rather than your own network. You may submit the sample capture in place of your own captures, but do not forget to include the required screenshots with your submission.
+
 ---
 
 ## Part 1: Capture Traceroute Traffic
@@ -63,10 +67,10 @@ If `traceroute` is not available in your Linux or WSL environment, install it us
 In the Wireshark display filter bar, enter:
 
 ```text
-udp || icmp
+udp || icmp || ip.flags.mf == 1 || ip.frag_offset > 0
 ```
 
-`traceroute` normally sends UDP packets and routers return ICMP messages. Your capture may also include unrelated traffic, so check the source, destination, and packet details before answering.
+`traceroute` normally sends UDP packets and routers return ICMP messages. The extra conditions keep IPv4 fragments visible, including fragments that do not contain a UDP header. Your capture may also include unrelated traffic, so check the source, destination, and packet details before answering.
 
 ---
 
@@ -136,7 +140,7 @@ In the packet list, find an outgoing IPv4 datagram containing a large traceroute
 
 ## Part 4: Take a Look at IPv6
 
-Capture your own IPv6 DNS lookup for the AAAA record for `youtube.com`. The `-6` option makes `dig` use IPv6 to contact the DNS server; requesting an AAAA record by itself does not ensure that the DNS traffic uses IPv6.
+Capture your own IPv6 DNS lookup for the AAAA record for `youtube.com`, or use the IPv6 DNS exchange in the [course sample capture](wireshark-ip-sample.pcap). The `-6` option makes `dig` use IPv6 to contact the DNS server; requesting an AAAA record by itself does not ensure that the DNS traffic uses IPv6.
 
 On macOS or Linux, start a Wireshark capture on your active network interface. On WSL, capture inside WSL with `tcpdump` and open the saved capture in Windows Wireshark:
 
@@ -204,8 +208,8 @@ Post your answers in [Marmoset](https://cs.ycp.edu/marmoset) by the scheduled du
 Please submit the following:
 
 - your answers to all questions,
-- a copy of your packet capture file (`.pcap` or `.pcapng`) for Part 1,
-- a copy of your IPv6 DNS capture file (`.pcap` or `.pcapng`) for Part 4,
+- a copy of your packet capture file (`.pcap` or `.pcapng`) for Part 1 (or the course sample capture, if used),
+- a copy of your IPv6 DNS capture file (`.pcap` or `.pcapng`) for Part 4 (or the course sample capture, if used),
 - a screenshot of the first traceroute packet with its IPv4 header expanded,
 - a screenshot showing the IPv4 fragments and their header details,
 - and a screenshot of the IPv6 DNS request or response with the IPv6 header expanded.
