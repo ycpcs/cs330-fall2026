@@ -8,7 +8,7 @@ title: "Programming Assignment: Three Letter Word Match"
 
 ## CS 330: Three Letter Word Match
 
-## Due: Tuesday, Nov 12, 2026 by 11:59 PM
+## Due: Thursday, Nov 12, 2026 by 11:59 PM
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
