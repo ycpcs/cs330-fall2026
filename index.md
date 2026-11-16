@@ -26,6 +26,7 @@ This is your central hub for all course-related information, including announcem
 > **The exam dates are fixed and will not change. Please plan accordingly.**
 
 * **Dec 10** - Final Exam 6:00PM - 8:00PM
+* **Dec 01** - [Analyzing Ethernet and ARP](assignments/wireshark-ethernet-arp.html) Due
 * **Nov 12** - [Three Letter Word Match](assignments/tlm.html) Due
 * **Nov 10** - Exam 3 (Remote) [Study Guide](schedule/exams/exam-3-guide.html)
 * **Nov 05** - [IP](assignments/wireshark-ip.html) Due

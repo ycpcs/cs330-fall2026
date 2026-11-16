@@ -27,6 +27,7 @@ This page lists the homework assignments, labs, and programming assignments for 
 > [Analyzing TCP](wireshark-tcp.html) | n/a | 75 | Oct 13, 2026 |
 > [Three Letter Word Match](tlm.html) * | n/a | 300 | Nov 12, 2026 |
 > [IP](wireshark-ip.html) | n/a | 100 | Nov 05, 2026 |
+> [Analyzing Ethernet and ARP](wireshark-ethernet-arp.html) | n/a | 75 | Dec 01, 2026 |
 > 
 <sup>*</sup> Programming Assignment
 
