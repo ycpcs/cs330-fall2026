@@ -130,6 +130,7 @@ Run `arp -a` in a terminal or command prompt after the ping completes. Find the 
 18. Does the gateway's MAC address in the cache agree with the address learned from the ARP reply? If not, explain one possible reason.
 19. In a sentence or two, explain what problem the ARP cache helps your computer avoid.
 20. If your capture includes ARP requests from other devices, choose one and record its sender and target IPv4 addresses. Why might your computer see the request even though it did not send it?
+21. Use the Ethernet source MAC address of the ARP request (your computer's interface, from Question 2) with [MAC Lookup](https://maclookup.app/) or another MAC address lookup service. What NIC manufacturer does it report? If the lookup cannot identify a manufacturer, or your interface uses a randomized MAC address, explain why.
 
 If you could not clear the gateway entry and did not capture a new request, use another complete ARP request/reply pair in your trace for Questions 7-16. Clearly note that you used a different pair.
 
